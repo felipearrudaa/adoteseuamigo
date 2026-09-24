@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AdoteAmigo — encontre um cachorro esperando por um lar cheio de amor.">
+  <title>AdoteAmigo | Mais amor, menos abandono</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="#" class="brand" aria-label="AdoteAmigo - página inicial">
+        <div class="brand-paw" aria-hidden="true">
+          <span class="toe toe-1"></span>
+          <span class="toe toe-2"></span>
+          <span class="toe toe-3"></span>
+          <span class="toe toe-4"></span>
+          <span class="pad"></span>
+        </div>
+
+        <div class="brand-text">
+          <strong>Adote<span>Amigo</span></strong>
+          <small>Mais amor, menos abandono</small>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="active" href="#inicio">Início</a>
+        <a href="cachorros.html">Cachorros</a>
+        <a href="como-adotar.html">Como Adotar</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-button" aria-label="Pesquisar">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.8"></circle>
+            <path d="M16.2 16.2 21 21"></path>
+          </svg>
+        </button>
+
+        <a class="header-cta" href="cachorros.html">
+          <span class="paw-icon">✣</span>
+          Quero Adotar
+        </a>
+      </div>
+
+      <button class="mobile-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-decoration hero-decoration-left"></div>
+      <div class="hero-decoration hero-decoration-bottom"></div>
+      <div class="hero-decoration hero-decoration-right"></div>
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span>♣</span>
+            ADOÇÃO DE CACHORROS
+          </div>
+
+          <h1>
+            Um lar pode<br>
+            mudar <span>uma vida.</span>
+          </h1>
+
+          <p>
+            Aqui você encontra cachorros que estão esperando
+            por uma nova chance. Adote, transforme uma vida
+            e ganhe um amigo para sempre.
+          </p>
+
+          <a href="#cachorros" class="primary-button hero-button">
+            <span class="button-paw">✣</span>
+            Encontrar meu novo amigo
+            <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=85"
+            alt="Cachorro olhando para a câmera"
+          >
+
+          <div class="hero-quote">
+            <span>Adotar</span>
+            <span>é um ato</span>
+            <span>de amor.</span>
+            <b>♡</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="container filter-container">
+        <div class="filter-bar" data-dog-filters>
+          <div class="filter-title">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+              <circle cx="8" cy="6" r="2"></circle>
+              <circle cx="15" cy="12" r="2"></circle>
+              <circle cx="10" cy="18" r="2"></circle>
+            </svg>
+            <span>Filtrar por:</span>
+          </div>
+
+          <label class="filter-field">
+            <span class="filter-icon">♧</span>
+            <span class="filter-label">Porte</span>
+            <select data-filter="porte" aria-label="Filtrar por porte">
+              <option value="">Todos os portes</option>
+              <option value="Pequeno">Pequeno</option>
+              <option value="Médio">Médio</option>
+              <option value="Grande">Grande</option>
+            </select>
+            <span class="select-arrow">⌄</span>
+          </label>
+
+          <label class="filter-field">
+            <span class="filter-icon">▣</span>
+            <span class="filter-label">Idade</span>
+            <select data-filter="idade" aria-label="Filtrar por idade">
+              <option value="">Qualquer idade</option>
+              <option value="Filhote">Filhote</option>
+              <option value="Jovem">Jovem</option>
+              <option value="Adulto">Adulto</option>
+              <option value="Idoso">Idoso</option>
+            </select>
+            <span class="select-arrow">⌄</span>
+          </label>
+
+          <label class="filter-field location-field">
+            <span class="filter-icon">⌖</span>
+            <span class="filter-label">Localização</span>
+            <select data-filter="localizacao" aria-label="Filtrar por localização">
+              <option value="">Todo o Brasil</option>
+              <option value="Taubaté - SP">Taubaté - SP</option>
+              <option value="São Luiz do Paraitinga - SP">São Luiz do Paraitinga - SP</option>
+              <option value="Ubatuba - SP">Ubatuba - SP</option>
+            </select>
+            <span class="select-arrow">⌄</span>
+          </label>
+
+          <button class="filter-search" type="button" data-filter-search>
+            <span>⌕</span>
+            Buscar
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DOGS -->
+    <section class="dogs-section" id="cachorros">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <div class="section-title">
+              <span class="paw-title">✣</span>
+              <h2>Cachorros disponíveis</h2>
+            </div>
+
+            <p>Conheça alguns dos nossos amigos que estão esperando por um lar.</p>
+          </div>
+
+          <a href="cachorros.html" class="view-all">Ver todos <span>→</span></a>
+        </div>
+
+
+        <div class="filter-empty">
+          <strong>Nenhum amigo encontrado.</strong><br>
+          Tente combinar outros filtros para encontrar um companheiro.
+        </div>
+
+        <div class="dog-grid">
+
+          <!-- CARD 1 -->
+          <article class="dog-card" data-porte="Grande" data-idade="Jovem" data-localizacao="Taubaté - SP">
+            <div class="dog-photo">
+              <img
+                src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=700&q=85"
+                alt="Thor, cachorro preto"
+              >
+              <button class="favorite" aria-label="Favoritar Thor">♡</button>
+            </div>
+
+            <div class="dog-info">
+              <h3>Thor</h3>
+
+              <div class="dog-details">
+                <span>♂ Macho</span>
+                <span>▣ 2 anos</span>
+                <span>♧ Grande</span>
+              </div>
+
+              <p class="dog-description">
+                Dócil, brincalhão e muito carinhoso.
+                Adora passear e fazer novos amigos.
+              </p>
+
+              <div class="badges">
+                <span>✓ Vacinado</span>
+                <span>✓ Castrado</span>
+              </div>
+
+              <div class="location">
+                <span>⌖</span>
+                Taubaté - SP
+              </div>
+
+              <a href="adocao.html?pet=Thor" class="adopt-button">
+                <span>✣</span>
+                Quero Adotar
+              </a>
+            </div>
+          </article>
+
+
+          <!-- CARD 2 -->
+          <article class="dog-card" data-porte="Pequeno" data-idade="Jovem" data-localizacao="Taubaté - SP">
+            <div class="dog-photo">
+              <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=85"
+                alt="Luna, cachorra caramelo"
+              >
+              <button class="favorite" aria-label="Favoritar Luna">♡</button>
+            </div>
+
+            <div class="dog-info">
+              <h3>Luna</h3>
+
+              <div class="dog-details">
+                <span>♀ Fêmea</span>
+                <span>▣ 1 ano</span>
+                <span>♧ Pequeno</span>
+              </div>
+
+              <p class="dog-description">
+                É super carinhosa, inteligente e se dá
+                bem com outros animais.
+              </p>
+
+              <div class="badges">
+                <span>✓ Vacinada</span>
+                <span>✓ Castrada</span>
+              </div>
+
+              <div class="location">
+                <span>⌖</span>
+                Taubaté - SP
+              </div>
+
+              <a href="adocao.html?pet=Luna" class="adopt-button">
+                <span>✣</span>
+                Quero Adotar
+              </a>
+            </div>
+          </article>
+
+
+          <!-- CARD 3 -->
+          <article class="dog-card" data-porte="Médio" data-idade="Jovem" data-localizacao="São Luiz do Paraitinga - SP">
+            <div class="dog-photo">
+              <img
+                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=700&q=85"
+                alt="Kiko, cachorro de porte médio"
+              >
+              <button class="favorite" aria-label="Favoritar Kiko">♡</button>
+            </div>
+
+            <div class="dog-info">
+              <h3>Kiko</h3>
+
+              <div class="dog-details">
+                <span>♂ Macho</span>
+                <span>▣ 3 anos</span>
+                <span>♧ Médio</span>
+              </div>
+
+              <p class="dog-description">
+                Calmo, observador e muito leal.
+                Perfeito para quem ama um companheiro tranquilo.
+              </p>
+
+              <div class="badges">
+                <span>✓ Vacinado</span>
+                <span>✓ Castrado</span>
+              </div>
+
+              <div class="location">
+                <span>⌖</span>
+                São Luiz do Paraitinga - SP
+              </div>
+
+              <a href="adocao.html?pet=Kiko" class="adopt-button">
+                <span>✣</span>
+                Quero Adotar
+              </a>
+            </div>
+          </article>
+
+
+          <!-- CARD 4 -->
+          <article class="dog-card" data-porte="Médio" data-idade="Adulto" data-localizacao="Ubatuba - SP">
+            <div class="dog-photo">
+              <img
+                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=85"
+                alt="Mel, cachorra preta e branca"
+              >
+              <button class="favorite" aria-label="Favoritar Mel">♡</button>
+            </div>
+
+            <div class="dog-info">
+              <h3>Mel</h3>
+
+              <div class="dog-details">
+                <span>♀ Fêmea</span>
+                <span>▣ 4 anos</span>
+                <span>♧ Médio</span>
+              </div>
+
+              <p class="dog-description">
+                Extrovertida, alegre e adora correr e brincar.
+                Vai deixar seu dia muito mais feliz.
+              </p>
+
+              <div class="badges">
+                <span>✓ Vacinada</span>
+                <span>✓ Castrada</span>
+              </div>
+
+              <div class="location">
+                <span>⌖</span>
+                Ubatuba - SP
+              </div>
+
+              <a href="adocao.html?pet=Mel" class="adopt-button">
+                <span>✣</span>
+                Quero Adotar
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="benefits" id="como-adotar">
+      <div class="container benefits-grid">
+
+        <div class="benefit">
+          <div class="benefit-icon">♡</div>
+          <div>
+            <strong>Mais de 500</strong>
+            <span>cachorros disponíveis</span>
+          </div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">♢</div>
+          <div>
+            <strong>Processo seguro</strong>
+            <span>e transparente</span>
+          </div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">⌂</div>
+          <div>
+            <strong>Adoção responsável</strong>
+            <span>é amor de verdade</span>
+          </div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">♧</div>
+          <div>
+            <strong>Juntos por um futuro</strong>
+            <span>sem abandono</span>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="sobre">
+      <div class="container about-content">
+        <div>
+          <span class="eyebrow">SOBRE O ADOTEAMIGO</span>
+          <h2>Um novo começo começa com você.</h2>
+        </div>
+
+        <p>
+          O AdoteAmigo conecta pessoas que querem adotar
+          com cachorros que estão esperando por uma família.
+          Nosso objetivo é tornar a adoção mais simples,
+          responsável e cheia de carinho.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>AdoteAmigo</strong> © 2026. Todos os direitos reservados.</p>
+
+      <div class="footer-links">
+        <a href="#">Termos de Uso</a>
+        <span>|</span>
+        <a href="#">Política de Privacidade</a>
+        <span>|</span>
+        <a href="#">Fale Conosco</a>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = [...document.querySelectorAll(".dog-card[data-porte]")];
+  if (!cards.length) return;
+
+  const filterGroups = document.querySelectorAll("[data-dog-filters]");
+
+  function normalize(value) {
+    return (value || "")
+      .toString()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+  }
+
+  function getFilters(group) {
+    return {
+      porte: normalize(group.querySelector('[data-filter="porte"]')?.value),
+      idade: normalize(group.querySelector('[data-filter="idade"]')?.value),
+      localizacao: normalize(group.querySelector('[data-filter="localizacao"]')?.value)
+    };
+  }
+
+  function matches(card, filters) {
+    const porte = normalize(card.dataset.porte);
+    const idade = normalize(card.dataset.idade);
+    const localizacao = normalize(card.dataset.localizacao);
+
+    return (!filters.porte || filters.porte === "todos os portes" || porte === filters.porte)
+      && (!filters.idade || filters.idade === "qualquer idade" || filters.idade === "todas as idades" || idade === filters.idade)
+      && (!filters.localizacao || filters.localizacao === "todo o brasil" || filters.localizacao === "todas as localidades" || localizacao === filters.localizacao);
+  }
+
+  function applyFilters(group) {
+    const filters = getFilters(group);
+    let visible = 0;
+
+    cards.forEach(card => {
+      const show = matches(card, filters);
+      card.classList.toggle("filter-hidden", !show);
+      if (show) visible++;
+    });
+
+    const empty = group.closest("section")?.querySelector(".filter-empty") || group.querySelector(".filter-empty");
+    if (empty) {
+      empty.classList.toggle("show", visible === 0);
+      const count = empty.querySelector("[data-filter-count]");
+      if (count) count.textContent = `${visible} cachorro${visible === 1 ? "" : "s"}`;
+    }
+
+    const countLabel = group.querySelector("[data-filter-result]");
+    if (countLabel) {
+      countLabel.textContent = `${visible} cachorro${visible === 1 ? "" : "s"} encontrado${visible === 1 ? "" : "s"}`;
+    }
+  }
+
+  filterGroups.forEach(group => {
+    group.querySelectorAll("select[data-filter]").forEach(select => {
+      select.addEventListener("change", () => applyFilters(group));
+    });
+
+    group.querySelector("button[data-filter-search]")?.addEventListener("click", () => {
+      applyFilters(group);
+      const results = document.querySelector(".dogs-section, .inner-section");
+      if (results && window.innerWidth < 900) {
+        results.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+
+    applyFilters(group);
+  });
+});
+</script>
+
+</body>
+</html>
