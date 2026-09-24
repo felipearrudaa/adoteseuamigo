@@ -79,7 +79,7 @@
         method="POST"
       >
         <!-- Web3Forms: substitua pelo seu Access Key -->
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="access_key" value="6881028a-78e0-44c8-b0fd-b67c6ea18504">
         <input type="hidden" name="subject" value="Nova solicitação de adoção - AdoteAmigo">
         <input type="hidden" name="from_name" value="AdoteAmigo">
         <input type="hidden" name="pet" id="pet-hidden" value="Thor">
@@ -217,7 +217,7 @@
 
     const accessKey = form.querySelector('[name="access_key"]').value.trim();
 
-    if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
+    if (!accessKey || accessKey === "6881028a-78e0-44c8-b0fd-b67c6ea18504") {
       status.className = "form-status show error";
       status.textContent = "Antes de enviar: coloque seu Access Key do Web3Forms no campo access_key do código.";
       return;
